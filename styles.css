@@ -91,14 +91,14 @@ h1 {
 }
 
 .quote-search {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: teal;
   width: 100%;
 }
 .quote-author-search {
   font-style: italic;
   text-align: right;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
 }
 
