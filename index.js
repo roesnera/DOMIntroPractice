@@ -56,3 +56,60 @@ const handleCopy = async () => {
 
 btnRandom.addEventListener("click", getRandomQuote);
 btnCopy.addEventListener("click", handleCopy);
+
+function getQuotesByAuthor(inputAuthor) {
+  let authorQuotes = quotes.filter((quote) => {
+    if (
+      quote.author &&
+      quote.author.toLowerCase() === inputAuthor.toLowerCase()
+    ) {
+      return quote;
+    }
+  });
+  return authorQuotes;
+}
+
+function appendSearchResults(quotes) {
+  quotes.forEach((quote, idx) => {
+    const { pTextSearch, pAuthorSearch } = createQuoteHTML(idx, quote);
+    quoteSearch.appendChild(pTextSearch);
+    quoteSearch.appendChild(pAuthorSearch);
+  });
+
+  function createQuoteHTML(idx, quote) {
+    let pTextSearch = document.createElement("p");
+    pTextSearch.setAttribute("class", "quote-text-search");
+    let pAuthorSearch = document.createElement("p");
+    pAuthorSearch.setAttribute("class", "quote-author-search");
+
+    pTextSearch.innerHTML = `${idx + 1}. ${quote.text}`;
+    pAuthorSearch.innerHTML = quote.author;
+    return { pTextSearch, pAuthorSearch };
+  }
+}
+
+function handleQuotesByAuthor() {
+  error.innerText = "";
+  quoteSearch.innerText = "";
+  const inputAuthor = inputSearch.value;
+  if (!inputAuthor) {
+    error.innerText = "This field is required";
+    return;
+  }
+  let quotes = getQuotesByAuthor(inputAuthor);
+  if (quotes.length === 0) {
+    error.innerText = "Sorry! I don't have anything for this author!";
+  }
+  appendSearchResults(quotes);
+
+  inputSearch.value = "";
+}
+
+function search(event) {
+  if (event.key === "Enter") {
+    handleQuotesByAuthor();
+  }
+}
+
+btnSearch.addEventListener("click", handleQuotesByAuthor);
+document.getElementById("input-search").addEventListener("keydown", search);
