@@ -1,8 +1,12 @@
 import quotes from "./dummyAPI.js";
 
-// you can access individual quotes from the quotes array like this:
-console.log(quotes[0].text); // outputs the text of the quote
-console.log(quotes[0].author); // outputs the author of the quote
+const btnRandom = document.getElementById("btn-random");
+const quoteText = document.getElementById("quote-text");
+const quoteAuthor = document.getElementById("quote-author");
+const btnCopy = document.getElementById("btn-copy");
+const copied = document.getElementById("copied");
 
-
-// your job is to use DOM manipulation to display a random quote in the index.html page that is retrieved from the quotes array
+const inputSearch = document.getElementById("input-search");
+const error = document.getElementById("error");
+const btnSearch = document.getElementById("btn-search");
+const quoteSearch = document.getElementsByClassName("quote-search")[0];
