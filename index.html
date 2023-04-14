@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quote App</title>
     <script src="index.js" type="module" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <p>Your page will be styled here!</p>
-    <div>Quotes will display here</div>
-    <button>Click me to generate a random quote</button>
+    <h1>Quote App</h1>
+    <div class="container">
+        <div class="quote-container-random">
+            <button id="btn-random">Get random quote</button>
+            <div class="quote">
+                <p id="quote-text"></p>
+                <p id="quote-author"></p>
+            </div>
+            <button id="btn-copy">Copy</button>
+            <div id="copied"></div>
+        </div>
+        <div class="quote-container-search">
+            <div class="search-btns">
+                <input type="text" placeholder="Search" id="input-search">
+                <div id="error"></div>
+                <button id="btn-search">Search</button>
+            </div>
+            <div class="quote-search">
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
