@@ -21,17 +21,18 @@ main {
   margin: 1rem;
 }
 h1 {
-    text-align: center;
-    color: rgb(13, 97, 97);
+  text-align: center;
+  color: rgb(13, 97, 97);
 }
 .quote {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: teal;
   width: 100%;
 }
 #quote-author {
   font-style: italic;
   text-align: right;
+  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 700px) {
@@ -44,7 +45,6 @@ h1 {
   .quote-container-random {
     border-right: 1px solid rgb(221, 187, 187);
   }
- 
 }
 
 .quote-container-random,
@@ -65,6 +65,7 @@ h1 {
   cursor: pointer;
   font-size: 1.2rem;
   width: fit-content;
+  margin-bottom: 1rem;
 }
 
 #btn-random:hover {
@@ -89,13 +90,15 @@ h1 {
 }
 
 .quote-search {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: teal;
   width: 100%;
 }
 .quote-author-search {
   font-style: italic;
   text-align: right;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .search-btns {
@@ -116,7 +119,7 @@ h1 {
   cursor: pointer;
   font-size: 1.2rem;
   width: fit-content;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 #btn-search:hover {
   background-color: rgb(199, 28, 28);
@@ -138,6 +141,7 @@ h1 {
   color: white;
   cursor: pointer;
   transition: all 0.4s;
+  margin-top: 1rem;
 }
 #btn-copy:hover {
   background-color: darkgreen;
