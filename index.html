@@ -12,26 +12,28 @@
 
 <body>
     <h1>Quote App</h1>
-    <div class="container">
-        <div class="quote-container-random">
-            <button id="btn-random">Get random quote</button>
-            <div class="quote">
-                <p id="quote-text"></p>
-                <p id="quote-author"></p>
+    <main>
+        <div class="container">
+            <div class="quote-container-random">
+                <button id="btn-random">Get random quote</button>
+                <div class="quote">
+                    <p id="quote-text"></p>
+                    <p id="quote-author"></p>
+                </div>
+                <button id="btn-copy">Copy</button>
+                <div id="copied"></div>
             </div>
-            <button id="btn-copy">Copy</button>
-            <div id="copied"></div>
+            <div class="quote-container-search">
+                <div class="search-btns">
+                    <input type="text" placeholder="Enter author" id="input-search">
+                    <div id="error"></div>
+                    <button id="btn-search">Search</button>
+                </div>
+                <div class="quote-search">
+                </div>
+            </div>
         </div>
-        <div class="quote-container-search">
-            <div class="search-btns">
-                <input type="text" placeholder="Search" id="input-search">
-                <div id="error"></div>
-                <button id="btn-search">Search</button>
-            </div>
-            <div class="quote-search">
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>
