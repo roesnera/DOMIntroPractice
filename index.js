@@ -71,20 +71,26 @@ function getQuotesByAuthor(inputAuthor) {
 
 function appendSearchResults(quotes) {
   quotes.forEach((quote, idx) => {
-    const { pTextSearch, pAuthorSearch } = createQuoteHTML(idx, quote);
-    quoteSearch.appendChild(pTextSearch);
-    quoteSearch.appendChild(pAuthorSearch);
+    const blockQuote = createQuoteHTML(idx, quote);
+    quoteSearch.appendChild(blockQuote);
   });
 
   function createQuoteHTML(idx, quote) {
+    let blockQuote = document.createElement("blockquote");
+    blockQuote.setAttribute("class", "bQuote");
+
     let pTextSearch = document.createElement("p");
     pTextSearch.setAttribute("class", "quote-text-search");
+
     let pAuthorSearch = document.createElement("p");
     pAuthorSearch.setAttribute("class", "quote-author-search");
 
     pTextSearch.innerHTML = `${idx + 1}. ${quote.text}`;
     pAuthorSearch.innerHTML = quote.author;
-    return { pTextSearch, pAuthorSearch };
+
+    blockQuote.appendChild(pTextSearch).appendChild(pAuthorSearch);
+
+    return blockQuote;
   }
 }
 
