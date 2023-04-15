@@ -2,6 +2,8 @@
 
 ## [Live](https://muhiddinkurbonov.github.io/Quote-App/) | [Repo](https://github.com/muhiddinkurbonov/Quote-App)
 
+![Screenshot](https://github.com/muhiddinkurbonov/Quote-App/blob/main/quote.png)
+
 ## Features
 - get random quote
 - copy random quote to clipboard
