@@ -4,13 +4,11 @@ const btnRandom = document.getElementById("btn-random");
 const quoteText = document.getElementById("quote-text");
 const quoteAuthor = document.getElementById("quote-author");
 const btnCopy = document.getElementById("btn-copy");
-const copied = document.getElementById("copied");
 
 const inputSearch = document.getElementById("input-search");
 const error = document.getElementById("error");
-const btnSearch = document.getElementById("btn-search");
+const iconSearch = document.getElementById("search-icon");
 const quoteSearch = document.getElementsByClassName("quote-search")[0];
-
 // get random quote index
 function random() {
   return Math.floor(Math.random(0) * quotes.length);
@@ -115,7 +113,8 @@ function search(event) {
   if (event.key === "Enter") {
     handleQuotesByAuthor();
   }
+  
 }
 
-btnSearch.addEventListener("click", handleQuotesByAuthor);
-document.getElementById("input-search").addEventListener("keydown", search);
+iconSearch.addEventListener("click", handleQuotesByAuthor);
+inputSearch.addEventListener("keydown", search);

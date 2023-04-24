@@ -20,9 +20,10 @@ main {
   display: flex;
   justify-content: center;
 }
-h1 {
+#quote-h1 {
   text-align: center;
   color: rgb(13, 97, 97);
+  margin-bottom: 2rem;
 }
 .quote {
   font-size: 1.6rem;
@@ -39,11 +40,8 @@ h1 {
 @media only screen and (min-width: 700px) {
   .container {
     display: grid;
+    column-gap: 10rem;
     grid-template: 1fr / 1fr 1fr;
-  }
-
-  .quote-container-random {
-    border-right: 1px solid rgb(221, 187, 187);
   }
 }
 
@@ -53,6 +51,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+}
+img#search-icon {
+  width: 2rem;
+  padding-right: 0.2rem;
+  cursor: pointer;
 }
 .container {
   width: 100%;
@@ -80,15 +83,13 @@ h1 {
   width: min(100%, 400px);
   padding: 1rem;
   border: none;
-  border-radius: 1.2rem;
+  border-radius: 2rem;
   font-size: 1rem;
   color: #043d36;
 }
 
 #input-search:focus {
-  outline: none !important;
-  border: 1px solid #3cbdac;
-  box-shadow: 0 0 10px #20b4a0;
+  outline: none;
 }
 
 .quote-search {
@@ -111,22 +112,10 @@ h1 {
   width: 100%;
 }
 
-#btn-search {
-  background-color: rgb(230, 73, 73);
-  padding: 1rem 2rem;
-  border: none;
+#search-bar {
+  display: flex;
+  background-color: white;
   border-radius: 2rem;
-  color: rgb(235, 230, 230);
-  transition: all 0.4s;
-  cursor: pointer;
-  font-size: 1.2rem;
-  width: fit-content;
-  margin: 1rem 0;
-}
-#btn-search:hover {
-  background-color: rgb(199, 28, 28);
-  padding: 1rem 3rem;
-  color: white;
 }
 
 #error {
