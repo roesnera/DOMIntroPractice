@@ -40,7 +40,7 @@ function fadeOut(el) {
 
 const handleCopy = async () => {
   const quoteText = document.querySelector(".quote").innerText;
-  let copied = document.getElementById("copied");
+  const copied = document.getElementById("copied");
   copied.style.opacity = 1;
   copied.style.display = "block";
   try {
